@@ -71,7 +71,7 @@ spring:
   data:
     redis:
       connect-timeout: 2s
-      host: localhost
+      host: ${SPRING_REDIS_HOST:localhost}
       port: 6379
       timeout: 1s
   session:
@@ -92,6 +92,6 @@ resilience4j:
       default:
         timeoutDuration: 5s
 
-logging:
-  level:
-    io.github.resilience4j: DEBUG
+#logging:
+#  level:
+#    io.github.resilience4j: DEBUG
